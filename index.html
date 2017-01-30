@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div ng-app="myApp" class="container-fluid">
+  <!-- <div class="row"> -->
+   <!--  <div class="col-md-12">
+      <div class="page-header">
+        <h1>{{ title }}</h1>
+      </div>
+    </div> -->
+    
+    <div ui-view></div>
+    
+  <!-- </div> -->
+  
+  <script type="text/ng-template" id="login.html">
+    <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-6" class="loginimage" id="loginimage">
+
+      <img src="images/icon_white_1024.png" class="login-icon" alt="">
+        <div class="content-details col-md-6">
+          <span class="content-viewer "> Content Viewer</span><br/>
+        <span class="content-version">0.1.6</span>
+        </div>
+
+        <div class="image-footer col-md-11">
+          <span><span class="i-circle">i</span>&nbsp;&nbsp;<a href="#" class="learn-more">learn more about context viewer</a></span><br/>
+          <span>This application is protected by copyright law and international treaties. &#169;2016 Schneider electric Solar Interters U.S.A, Inc. All rights reserved.</span>
+        </div>
+      
+        <div class="dark-green-bar"></div>
+        
+      </div>
+      <div class="col-md-6" id="login-form">
+      <div class="light-green-bar"></div>
+
+    
+        <div class="col-md-10 sps-detected">
+        <span class="sps-word"> SPS detected</span><a href="#" class="refresh-button"><span class="glyphicon glyphicon-repeat"></span></a><br/>
+        <span> Last refresh : August 10th 2016, 4:34: 46 pm </span>
+        <select name="" class="form-control sps-select" id="sps">
+          <option value="please choose">Please Choose</option>
+          <option value="option1">Option1</option>
+        </select>
+        <span class="ip-comment">please select an IP.</span>
+          
+        </div>
+       
+      
+       <div class="col-md-10 login-main">
+          <form ng-submit="formSubmit()" class="form">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="text" class="form-control" ng-model="username" placeholder="username" required=""/>
+          </div> 
+
+          <div class="form-group">
+            <input type="password" class="form-control" ng-model="password" placeholder="password" required=""/>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-success">Login</button>
+            <span class="text-danger">{{ error }}</span>
+            <button type="button" class="btn btn-default off-line-mode">Off-line mode</button>
+          </div>
+
+        </div>
+      </form>
+
+
+
+       </div>
+   
+      <img class="logo-bottom" src="images/schneider_LIO_Life-Green_RGB.png" alt="schneider Life Green">  
+      </div>
+    </div>
+      
+    </div>
+  </script>
+  
+  <script type="text/ng-template" id="home.html">
+    <div class="col-md-12">
+      <h3>Home Page</h3>
+    
+      <a ui-sref="login">Back</a>
+       <li ng-repeat="todo in todos">
+      {{todo.text}} - <em>{{todo.done}}</em>
+    </li>
+    </div>
+  </script>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
