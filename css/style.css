@@ -2,17 +2,14 @@
 	margin:0px;
 	padding:0px;
 }
-
 #loginimage {
     margin-top: -20px;
     margin-left: -40px;
-	background-image:url('../images/background_login_tablet.png');
-	
+	background-image:url('../images/background_login_tablet.png');	
 	height:600px;
 	background-repeat:no-repeat;
 	background-size: cover;
 	padding-right:0px;
-
 }
 .login-icon {
 	width: 175px;
@@ -27,7 +24,6 @@
     background: green;
     margin-top: -330px;
 }
-
 .light-green-bar{
 	float: left;
     height: 100%;
@@ -35,8 +31,7 @@
     z-index: 9999;
     background: lightgreen;
 }
-#login-form{
-	
+#login-form{	
 	height:600px;
 	padding-left:0px;
 }
@@ -45,7 +40,6 @@
     background: lightgrey;
     padding: 10%;
 }
-
 .btn-success{
 	width:100%;
 }
@@ -59,7 +53,6 @@
 	float:right;
 	margin-top: 200px;
 }
-
 .content-details {
 	text-align:center;
     color: white;
@@ -89,7 +82,7 @@
     font-size: 2rem;
 }
 .glyphicon-repeat {
-	    background: beige;
+	background: beige;
     padding: 5px;
     border-radius: 5px;
 }

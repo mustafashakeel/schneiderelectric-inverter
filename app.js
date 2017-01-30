@@ -11,7 +11,6 @@
         $state.transitionTo('login');
       }
   });
-  
   app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
     
@@ -28,10 +27,8 @@
       });
   }]);
 
-
-
   app.controller('LoginController', function($scope, $rootScope, $stateParams, $state, LoginService) {
-    $rootScope.title = "AngularJS Login Sample";
+    $rootScope.title = "AngularJS Login";
     
     $scope.formSubmit = function() {
       if(LoginService.login($scope.username, $scope.password)) {
@@ -42,18 +39,11 @@
       } else {
         $scope.error = "Incorrect username/password !";
       }   
-    };
-    
+    };   
   });
   
   app.controller('HomeController', function($scope, $rootScope, $stateParams, $state, $http, LoginService) {
-    $rootScope.title = "AngularJS Login Sample";
-
-     $http.get('todos.json')
-       .then(function(res){
-          $scope.todos = res.data;                
-        });
-    
+    $rootScope.title = "logged in"; 
   });
   
   app.factory('LoginService', function() {
@@ -69,8 +59,6 @@
       isAuthenticated : function() {
         return isAuthenticated;
       }
-    };
-    
-  });
-  
+    };  
+  });  
 })();
